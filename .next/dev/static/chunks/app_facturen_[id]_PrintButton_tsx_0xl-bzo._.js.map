@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///Users/macbook/bumperbank-financien/app/facturen/[id]/PrintButton.tsx"],"sourcesContent":["// app/facturen/[id]/PrintButton.tsx\n\"use client\";\n\nexport default function PrintButton() {\n  return (\n    <button\n      onClick={() => window.print()}\n      className=\"bg-bumpr-accent text-white px-4 py-2 rounded-md text-sm font-medium hover:opacity-90\"\n    >\n      🖨️ Afdrukken / Opslaan als PDF\n    </button>\n  );\n}"],"names":["PrintButton","onClick","window","print","className"],"mappings":";;;;;AAAA,oCAAoC;AACpC;;AAEe,SAASA;IACtB,qBACE,6LAAC;QACCC,SAAS,IAAMC,OAAOC,KAAK;QAC3BC,WAAU;kBACX;;;;;;AAIL;KATwBJ"}}]
+}

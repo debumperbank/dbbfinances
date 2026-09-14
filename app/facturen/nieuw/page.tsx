@@ -1,5 +1,6 @@
 import { createClient } from "@/lib/supabase/server";
 import { maakFactuur } from "../actions";
+import { redirect } from "next/navigation";
 
 export default async function NieuweFactuurPage({
   searchParams,
@@ -14,7 +15,7 @@ export default async function NieuweFactuurPage({
   const supabase = await createClient();
   const { data: klus } = await supabase
     .from("klussen")
-    .select("*, klanten(naam), klus_items(*, klustypes(naam, nummer))")
+    .select("*, klanten(id, naam), klus_items(*, klustypes(naam, nummer))")
     .eq("id", klusId)
     .single();
 
@@ -25,7 +26,17 @@ export default async function NieuweFactuurPage({
 
   async function bevestigen() {
     "use server";
-    await maakFactuur(klusId!);
+
+    const result = await maakFactuur({
+      klus_id: klusId!,
+      klant_id: klus.klant_id ?? klus.klanten?.id,
+      subtotaal: Number(klus.totaal_bedrag),
+      btw_bedrag: btw,
+      totaal: totaal,
+    });
+
+    // Stuur direct door naar de detail- en afdrukpagina van de gegenereerde factuur
+    redirect(`/facturen/${result.factuur.id}`);
   }
 
   return (
@@ -42,7 +53,7 @@ export default async function NieuweFactuurPage({
               <span>
                 {item.aantal}× #{item.klustypes?.nummer} {item.klustypes?.naam}
               </span>
-              <span>€{item.bedrag}</span>
+              <span>€{Number(item.bedrag).toFixed(2)}</span>
             </li>
           ))}
         </ul>
@@ -66,7 +77,7 @@ export default async function NieuweFactuurPage({
       <form action={bevestigen}>
         <button
           type="submit"
-          className="bg-bumpr-accent text-white rounded-md px-5 py-2.5 text-sm font-medium"
+          className="bg-bumpr-accent text-white rounded-md px-5 py-2.5 text-sm font-medium hover:opacity-90 transition-opacity"
         >
           Factuur genereren
         </button>
