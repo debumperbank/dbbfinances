@@ -1,0 +1,8 @@
+{
+  "/instellingen/klustypes/page": "app/instellingen/klustypes/page.js",
+  "/login/page": "app/login/page.js",
+  "/klussen/page": "app/klussen/page.js",
+  "/dashboard/page": "app/dashboard/page.js",
+  "/facturen/page": "app/facturen/page.js",
+  "/klussen/nieuw/page": "app/klussen/nieuw/page.js"
+}

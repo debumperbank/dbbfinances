@@ -1,0 +1,9 @@
+{
+  "/dashboard/page": "app/dashboard/page.js",
+  "/facturen/nieuw/page": "app/facturen/nieuw/page.js",
+  "/facturen/page": "app/facturen/page.js",
+  "/instellingen/klustypes/page": "app/instellingen/klustypes/page.js",
+  "/klussen/nieuw/page": "app/klussen/nieuw/page.js",
+  "/klussen/page": "app/klussen/page.js",
+  "/page": "app/page.js"
+}

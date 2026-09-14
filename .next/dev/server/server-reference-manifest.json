@@ -1,0 +1,39 @@
+{
+  "node": {
+    "40622440ea6936621d00b3f660c7e7154897ff032d": {
+      "workers": {
+        "app/facturen/nieuw/page": {
+          "moduleId": "[project]/.next-internal/server/app/facturen/nieuw/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/facturen/nieuw/page.tsx [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/app/facturen/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "codeHash": null
+        }
+      },
+      "filename": "app/facturen/nieuw/page.tsx",
+      "exportedName": "$$RSC_SERVER_ACTION_0"
+    },
+    "406e26330752bf50682cb15263ed29631fee1d56a2": {
+      "workers": {
+        "app/facturen/nieuw/page": {
+          "moduleId": "[project]/.next-internal/server/app/facturen/nieuw/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/facturen/nieuw/page.tsx [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/app/facturen/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "codeHash": null
+        }
+      },
+      "filename": "app/facturen/actions.ts",
+      "exportedName": "maakFactuur"
+    },
+    "60ba5b530ac8d96eaea4790fe8a3861cc6fadfa98a": {
+      "workers": {
+        "app/facturen/nieuw/page": {
+          "moduleId": "[project]/.next-internal/server/app/facturen/nieuw/page/actions.js { ACTIONS_MODULE0 => \"[project]/app/facturen/nieuw/page.tsx [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/app/facturen/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "codeHash": null
+        }
+      },
+      "filename": "app/facturen/actions.ts",
+      "exportedName": "markeerVoldaan"
+    }
+  },
+  "edge": {},
+  "encryptionKey": "8NUmiQn6MaYXrcWWh6LePtOxtP4GhDmut1ghpqCAAn8="
+}
